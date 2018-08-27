@@ -1,0 +1,14 @@
+void setup() {
+  Serial.begin(9600);
+  pinMode(9,OUTPUT);
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  int k=analogRead(A0);
+  int brightness = map(k,0,1023,0,255);
+  analogWrite(9,brightness);
+  // put your main code here, to run repeatedly:
+
+}
