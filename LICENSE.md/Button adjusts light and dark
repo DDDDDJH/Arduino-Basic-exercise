@@ -1,0 +1,24 @@
+
+bool pushuButton1;
+bool pushuButton2;
+void setup() {
+  //start serial connecti
+  //configure pin2 as an input and enable the internal pull-up resistor
+  pinMode(2, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
+  pinMode(8,INPUT_PULLUP);
+
+}
+
+void loop() {
+  //read the pushbutton value into a variable
+  pushuButton1 = digitalRead(2);
+  pushuButton2 = digitalRead(8);
+
+  if (!pushuButton1 && !pushuButton2 ) {
+    digitalWrite(13, HIGH);
+  }
+  else {
+    digitalWrite(13, LOW);
+  }
+}
