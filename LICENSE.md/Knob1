@@ -1,0 +1,19 @@
+
+#include <Servo.h>
+
+Servo myservo; 
+int skr=0;
+int zskr=0;
+void setup()
+{
+  myservo.attach(9);  
+}
+
+void loop() 
+{ 
+  skr=analogRead(A0);
+  zskr=map(skr,0,1023,0,180);
+  myservo.write(zskr);                  
+  delay(15);                           
+} 
+
